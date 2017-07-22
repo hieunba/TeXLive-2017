@@ -1,11 +1,11 @@
 # TeXLive-2017-with-Pygments
-Contains full TexLive-2017 with additional python3-pygments library for source code highlighting via minted package.
+Contains full TeXLive-2017 with additional python3-pygments library for source code highlighting via minted package.
 
 
 
-## How to run the image 
+## How to run this image ?
 
-From the interactive docker shell, pul this image with:
+From the interactive docker shell, pull this image with:
 
 `docker pull this image`
 
