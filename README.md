@@ -10,7 +10,8 @@ From the interactive docker shell, pul this image with:
 `docker pull this image`
 
 
-After you are done with the pull, mount the directory in host operating syatem containing your .tex files like this:
+After you are done with the pull, mount the directory present in host operating system containing your .tex files 
+into docker image like this:
 
 `docker run -it -v /c/Users/username/Folder_with_tex:/home docker-image bin/bash`
 
