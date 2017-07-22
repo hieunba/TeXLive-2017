@@ -2,7 +2,7 @@ FROM debian:testing
 MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
 LABEL updated_at '2017-07-22'
 RUN apt-get update \
-  && apt-get install -y gnupg wget curl libgetopt-long-descriptive-perl libdigest-perl-md5-perl python3 python3-pygments
+  && apt-get install -y gnupg wget curl libgetopt-long-descriptive-perl libdigest-perl-md5-perl python python-pygments
 WORKDIR /usr/local/src
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - && mv install-tl-20* install-tl
 
