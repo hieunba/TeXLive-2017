@@ -7,13 +7,13 @@ Contains full TeXLive-2017 with additional python3-pygments library for source c
 
 From the interactive docker shell, pull this image with:
 
-`docker pull this image`
+`docker pull suman12029/texlive-2017`
 
 
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
 into docker image like this:
 
-`docker run -it -v /c/Users/username/Folder_with_tex:/home docker-image bin/bash`
+`docker run -it -v /c/Users/username/Folder_with_tex:/home suman12029/texlive-2017 bin/bash`
 
 
 You will now have access to the terminal.
