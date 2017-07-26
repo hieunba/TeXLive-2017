@@ -1,5 +1,5 @@
 # TeXLive-2017-with-Pygments
-Contains full TeXLive-2017 with additional python3-pygments library for source code highlighting via minted package.
+Contains full TeXLive-2017 with additional python-pygments library for source code highlighting via minted package.
 
 
 
