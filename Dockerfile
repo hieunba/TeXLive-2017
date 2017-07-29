@@ -20,6 +20,4 @@ RUN apt-get install -y libarchive-zip-perl \
 RUN git clone https://github.com/brucemiller/LaTeXML.git 
 WORKDIR /LaTeXML
 RUN perl Makefile.PL && make && make install 
-WORKDIR /
-RUN apt-get -y autoremove && rm -r LaTeXML
 CMD ["tlmgr", "--version"]
