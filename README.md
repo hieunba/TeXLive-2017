@@ -1,5 +1,6 @@
-# TeXLive-2017-with-Pygments
+# TeXLive-2017-with-Pygments-and-LaTeXML
 Contains full TeXLive-2017 with additional python-pygments library for source code highlighting via minted package.
+Also contains LateXML for converting TeX documents into html/xml/mathml.
 
 
 
