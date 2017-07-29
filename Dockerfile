@@ -17,7 +17,7 @@ RUN apt-get install -y libarchive-zip-perl \
   libparse-recdescent-perl liburi-perl libuuid-tiny-perl libwww-perl \
   libxml2 libxml-libxml-perl libxslt1.1 libxml-libxslt-perl  \
   imagemagick libimage-magick-perl 
-RUN git clone https://github.com/brucemiller/LaTeXML.git && cd LaTeXML \
-  && perl Makefile.PL && make && make install
+RUN git clone https://github.com/brucemiller/LaTeXML.git && cd LaTeXML
+RUN perl Makefile.PL && make && make install
 
 CMD ["tlmgr", "--version"]
