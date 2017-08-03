@@ -19,5 +19,5 @@ RUN rm -rf /usr/local/src/install-tl && apt-get install -y libarchive-zip-perl \
   libxml2 libxml-libxml-perl libxslt1.1 libxml-libxslt-perl  \
   imagemagick libimage-magick-perl 
 RUN git clone https://github.com/brucemiller/LaTeXML.git 
-RUN cd LaTeXML && perl Makefile.PL && make && make install 
+RUN cd LaTeXML && perl Makefile.PL && make && make install && cd .. && rm -rf LaTeXML 
 CMD ["tlmgr", "--version"]
