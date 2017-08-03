@@ -2,7 +2,7 @@ FROM debian:testing
 MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
 LABEL updated_at '2017-07-26'
 RUN apt-get update \
-  && apt-get install -y gnupg git wget curl libgetopt-long-descriptive-perl libdigest-perl-md5-perl python python-pygments
+  && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl libdigest-perl-md5-perl python python-pygments
 WORKDIR /usr/local/src
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - && mv install-tl-20* install-tl
 
@@ -18,4 +18,4 @@ RUN apt-get install -y libarchive-zip-perl \
   libxml2 libxml-libxml-perl libxslt1.1 libxml-libxslt-perl  \
   imagemagick libimage-magick-perl 
 RUN git clone https://github.com/brucemiller/LaTeXML.git && cd LaTeXML && perl Makefile.PL && make && make install 
-#CMD ["tlmgr", "--version"]
+CMD ["tlmgr", "--version"]
