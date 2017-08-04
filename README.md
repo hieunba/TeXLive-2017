@@ -30,10 +30,9 @@ Now run:
 ## For converting tex to html with this docker image
 
 Run the  docker container as shown above and change the directory to /home where your .tex files are located.
-I will show example using this `perl6_cheatsheet.tex`(which is present in this repo) where I will convert it to `perl6_cheatsheet.html`(also present in this repo).
+I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`(also present in this repo).
 
 In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex` and then
-
 `latexmlpost --destination=perl6_cheatsheet.html perl6_cheatsheet`.
 
 After this you will see `perl6_cheatsheet.html` in your directory.
