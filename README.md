@@ -8,7 +8,7 @@ Also contains LateXML for converting TeX documents into html/xml/mathml.
 
 From the interactive docker shell, pull this image with:
 
-`docker pull suman12029/texlive-2017`
+`docker pull sumdoc/texlive-2017`
 
 
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
@@ -27,7 +27,18 @@ Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your "yourtex.tex" file getting compiled.
 
 
+## For converting tex to html with this docker image
 
-***Yes. Its awesome!!***
+Run the  docker container as shown above and change the directory to /home where your .tex files are located.
+I will show example using this `perl6_cheatsheet.tex` where I will convert it to `perl6_cheatsheet.html`.
+
+In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex` and then
+
+`latexmlpost --destination=perl6_cheatsheet.html perl6_cheatsheet`.
+
+After this you will see `perl6_cheatsheet.html` in your directory.
+
+**The size of image after docker pull is 5.52 GB** which is quite big but
+***Yes, Its awesome!!***
 
 
