@@ -1,4 +1,5 @@
 # TeXLive-2017-with-Pygments-and-LaTeXML
+---
 Contains full TeXLive-2017 with additional python-pygments library for source code highlighting via minted package.
 Also contains LateXML for converting TeX documents into html/xml/mathml.
 
@@ -28,9 +29,10 @@ Now run:
 
 
 ## For converting tex to html with this docker image
+---
 
 Run the  docker container as shown above and change the directory to /home where your .tex files are located.
-I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`(also present in this repo).
+I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`.
 
 In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex` and then
 `latexmlpost --destination=perl6_cheatsheet.html perl6_cheatsheet`.
