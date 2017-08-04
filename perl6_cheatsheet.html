@@ -1,0 +1,373 @@
+<!DOCTYPE html><html>
+<head>
+<title>Perl 6 Cheatsheet</title>
+<!--Generated on Fri Aug  4 14:45:32 2017 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on July 20, 2017.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_document" style="font-size:207%;">Perl 6 Cheatsheet</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Suman 
+<br class="ltx_break"><span class="ltx_text ltx_font_typewriter">suman81765@gmail.com
+<br class="ltx_break"></span>Kathmandu, Nepal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">July 20, 2017</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Regular Expressions</h2>
+
+<figure id="S1.T1" class="ltx_table">
+<table class="ltx_tabular">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">~~</code></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:325.2pt;">Smart match operator.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">$/</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Variable that contains the matched part of string.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">~$/</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Stringify the <code class="ltx_verbatim ltx_font_typewriter">$/</code> variable.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">.match</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Method invocation syntax.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">/ /</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Pattern is kept between a pair of slash delimiters.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;">
+<code class="ltx_verbatim ltx_font_typewriter">m/ /</code> or <code class="ltx_verbatim ltx_font_typewriter">m{ }</code>
+</td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Can use other delimiters except a pair of slash if we prefix the pattern with the letter“<code class="ltx_verbatim ltx_font_typewriter">m</code>”</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;">
+<code class="ltx_verbatim ltx_font_typewriter">rx/ /</code> or <code class="ltx_verbatim ltx_font_typewriter">rx{ }</code>
+</td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">signifies a pattern which can be stored in a variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">.</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches any character</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\w</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">word character, matches one single alphanumeric character (alphabetical characters, digits and <code class="ltx_verbatim ltx_font_typewriter">_</code> character)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\W</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">any other character than <code class="ltx_verbatim ltx_font_typewriter">\w</code>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\d</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">digits</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\D</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">non-digits</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\s</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">any kind of whitespace, not just vertical whitespace.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\S</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">non-whitespace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\n</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">newline</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\N</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">non-newline</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\h</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single horizontal whitespace character.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\H</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single character that is not a horizontal whitespace character.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\t</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single tab character.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\T</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single character that is not a tab.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\v</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single vertical whitespace character.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">\V</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a single character that is not vertical whitespace.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;[ ]&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">character class</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;foo&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">subrule</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;-[ ]&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Negating character class</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">^</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">anchor representing beginning of the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">^^</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">start of line in multiline strings</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">$</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">anchor representing end of the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">$$</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">end of line in multiline strings</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;?before string&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">match that comes before the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;!before string&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">match that does not come before the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;?after string&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">match that comes after the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;!after string&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">match that does not come after the string</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;?{ }</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Code assertion which will match if code block returns a true value</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;!{ }</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Code assertion which will match unless the code block returns a true value</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">||</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">First match alternation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">|</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Longest match alternation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">( )</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Capturing</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">$0, $1</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">capture numbers, first and second items of the matched object in list context</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">:i, :ignorecase</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">Ignore upper or lower case</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">:s,:sigspace</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">adverb that makes whitespace significant in regex pattern</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">:m</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">ignore marks</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">:g</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">global</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">:r</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">ratchet</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;|w&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">match a word boundary</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><span class="ltx_text ltx_wrap ltx_font_typewriter">&lt;!|w&gt;</span></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">not match a word boundary</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;&lt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a left word boundary.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:108.4pt;"><code class="ltx_verbatim ltx_font_typewriter">&gt;&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:325.2pt;">matches a right word boundary.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:108.4pt;"></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:325.2pt;"></td>
+</tr>
+</table>
+</figure>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Predefined subrules</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;alnum&gt;</code></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">\w</code></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:260.2pt;">‘alpha’ plus ‘digit’</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;alpha&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;:L&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Alphabetic characters</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;blank&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">\h</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Horizontal whitespace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;cntrl&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Control characters</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;digit&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">\d</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Decimal digits</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;graph&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">‘alnum’ plus ‘punct’</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;lower&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;:Ll&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Lowercase characters</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;print&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">‘graph’ plus ‘space’, but no ‘cntrl’</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;punct&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Punctuation and Symbols (only Punct beyond ASCII)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;space&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">\s</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Whitespace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;upper&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;:Lu&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Uppercase characters</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><span class="ltx_text ltx_wrap ltx_font_typewriter">&lt;|wb&gt;</span></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Word Boundary (zero-width assertion)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;ww&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Within Word (zero-width assertion)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">&lt;xdigit&gt;</code></td>
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify" style="width:260.2pt;">Hexadecimal digit [0-9A-Fa-f]</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:260.2pt;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Quantifiers</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">+</code></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:346.9pt;">matching preceding character one or more times. Quantifiers bind tighter than concatenation, so <code class="ltx_verbatim ltx_font_typewriter">ab+</code> matches one a followed by one or more b’s. This is different for quotes, so <code class="ltx_verbatim ltx_font_typewriter">`ab'+</code> matches the strings ab, abab, ababab etc.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">*</code></td>
+<td class="ltx_td ltx_align_justify" style="width:346.9pt;">matching preceding character zero or more times</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">?</code></td>
+<td class="ltx_td ltx_align_justify" style="width:346.9pt;">matching preceding character zero or one match</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">** min..max</code></td>
+<td class="ltx_td ltx_align_justify" style="width:346.9pt;">at least <code class="ltx_verbatim ltx_font_typewriter">min</code> and at most <code class="ltx_verbatim ltx_font_typewriter">max</code> times.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">%</code></td>
+<td class="ltx_td ltx_align_justify" style="width:346.9pt;">modified quantifier</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify" style="width:86.7pt;"><code class="ltx_verbatim ltx_font_typewriter">:</code></td>
+<td class="ltx_td ltx_align_justify" style="width:346.9pt;">prevent backtracking</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:86.7pt;"></td>
+<td class="ltx_td ltx_align_justify ltx_border_tt" style="width:346.9pt;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">Perl 6 is Unicode compliant.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">Whitespace is usually not significant within regex patterns unless specified with <code class="ltx_verbatim ltx_font_typewriter">:s</code> or <code class="ltx_verbatim ltx_font_typewriter">:sigspace</code> adverb.</p>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Aug  4 14:45:32 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
