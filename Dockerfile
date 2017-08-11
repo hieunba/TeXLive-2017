@@ -23,5 +23,5 @@ RUN apt-get install -y libarchive-zip-perl \
   imagemagick libimage-magick-perl 
 RUN git clone https://github.com/brucemiller/LaTeXML.git \
   && cd LaTeXML && perl Makefile.PL && make \
-  && make install && cd .. && rm -rf LaTeXML 
+  && make test && make install && cd .. && rm -rf LaTeXML 
 CMD ["tlmgr", "--version"]
