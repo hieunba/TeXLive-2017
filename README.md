@@ -39,7 +39,7 @@ In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex
 
 After this you will see `perl6_cheatsheet.html` in your directory.
 
-**The size of image after docker pull is 5.52 GB** which is quite big but
+**The size of image after docker pull is 5.47 GB** which is quite big but
 ***Yes, Its awesome!!***
 
 
