@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:sid
 MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
 LABEL updated_at '2017-08-14'
 RUN apt-get update \
