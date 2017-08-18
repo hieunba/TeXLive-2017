@@ -1,6 +1,6 @@
 FROM debian:sid
 MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
-LABEL updated_at '2017-08-14'
+LABEL updated_at '2017-08-18'
 RUN apt-get update \
   && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
   libdigest-perl-md5-perl python python-pygments
