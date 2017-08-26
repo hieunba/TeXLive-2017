@@ -3,7 +3,7 @@ MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
 LABEL updated_at '2017-08-18'
 RUN apt-get update \
   && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
-  libdigest-perl-md5-perl python python-pygments
+  libdigest-perl-md5-perl python python-pygments && rm -rf /var/lib/apt/lists/*
 WORKDIR /usr/local/src
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \
@@ -15,12 +15,12 @@ RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.
 
 WORKDIR /
 ENV PATH /usr/local/texlive/2017/bin/x86_64-linux:$PATH
-RUN apt-get install -y libarchive-zip-perl \
+RUN apt-get update && apt-get install -y libarchive-zip-perl \
   libfile-which-perl libimage-size-perl  \
   libio-string-perl libjson-xs-perl libtext-unidecode-perl \
   libparse-recdescent-perl liburi-perl libuuid-tiny-perl libwww-perl \
   libxml2 libxml-libxml-perl libxslt1.1 libxml-libxslt-perl  \
-  imagemagick libimage-magick-perl 
+  imagemagick libimage-magick-perl && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/brucemiller/LaTeXML.git \
   && cd LaTeXML && perl Makefile.PL && make \
   && make test && make install && cd .. && rm -rf LaTeXML 
