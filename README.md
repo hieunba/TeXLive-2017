@@ -4,13 +4,17 @@ Contains full TeXLive-2017 with additional python-pygments library for source co
 Also contains LateXML for converting TeX documents into html/xml/mathml.
 
 
-
-## How to run this image ?
+## How to get the image?
 
 From the interactive docker shell, pull this image with:
 
 `docker pull sumdoc/texlive-2017`
 
+## Why should you use it?
+
+If you work with Latex documents, this is useful to compile your document.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
+
+## How to run this image/ How do I use it ?
 
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
 into docker image like this:
