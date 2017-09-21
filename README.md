@@ -14,7 +14,7 @@ From the interactive docker shell, pull this image with:
 
 If you work with Latex documents, this is useful to compile your document.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
 
-## How to run this image/ How do I use it ?
+## How to run this image/ How do you use it ?
 
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
 into docker image like this:
