@@ -43,6 +43,9 @@ In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex
 
 After this you will see `perl6_cheatsheet.html` in your directory.
 
+**Or another easy way** is to use `Makefile`. Execute `make perl6_cheatsheet.html` in command line and you will get html file.
+
+
 **The size of image after docker pull is 5.47 GB** which is quite big but
 ***Yes, Its awesome!!***
 
