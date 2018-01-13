@@ -35,7 +35,7 @@ Now run:
 
 
 ## For converting tex to html with this docker image
----
+
 
 Run the  docker container as shown above and change the directory to /home where your .tex files are located.
 I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`.
@@ -49,7 +49,7 @@ After this you will see `perl6_cheatsheet.html` in your directory.
 
 **Or another easy way** is to use `Makefile`. Execute `make perl6_cheatsheet.html` in command line and you will get html file.
 
----
+
 
 **The size of image after docker pull is 5.47 GB** which is quite big but
 ***Yes, Its awesome!!***
