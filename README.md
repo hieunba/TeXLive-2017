@@ -21,7 +21,7 @@ If you work with Latex documents, this is useful to compile your document.  It c
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
 into docker image like this:
 
-`docker run -it -v /c/Users/username/Folder_with_tex:/home suman12029/texlive-2017 bin/bash`
+`docker run -it -v /c/Users/username/Folder_with_tex:/home sumdoc/texlive-2017 bin/bash`
 
 
 You will now have access to the terminal.
