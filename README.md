@@ -21,23 +21,19 @@ If you work with Latex documents, this is useful to compile your document indepe
 After you are done with the pull, mount the directory present in host operating system containing your .tex files 
 into docker image like this:
 
-`docker run -it -v /c/Users/username/Folder_with_tex:/home sumdoc/texlive-2017 bin/bash`
+`docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumdoc/texlive-2017 bin/bash`
 
 
-You will now have access to the terminal.
-
-Change the directory to /home by typing:
-
-`cd /home` where you will see the .tex files in the directory which was mounted.
+You will now have access to the terminal. Your working dir is `/home` where you will see the .tex files.
 
 Now run:
-`pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your "yourtex.tex" file getting compiled.
+`pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
 
 
 ## For converting tex to html with this docker image
 
 
-Run the  docker container as shown above and change the directory to /home where your .tex files are located.
+Run the  docker container as shown above with `/home` as working directory where your .tex files are located.
 I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`.
 
 In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex` and then
