@@ -14,7 +14,7 @@ From the interactive docker shell, pull this image with:
 
 ## Why should you use it?
 
-If you work with Latex documents, this is useful to compile your document.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
+If you work with Latex documents, this is useful to compile your document independent of OS and without the need to install anything.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
 
 ## How to run this image/ How do you use it ?
 
