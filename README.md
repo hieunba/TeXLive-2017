@@ -1,6 +1,6 @@
 # TeXLive-2017-with-Pygments-and-LaTeXML
 
-[![TexLive:2017](https://img.shields.io/badge/TexLive-2017-brightgreen.svg)](https://www.tug.org/texlive/acquire.html)
+[![TexLive:2017](https://img.shields.io/badge/TexLive-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Contains full TeXLive-2017 with additional python-pygments library for source code highlighting via minted package.
