@@ -1,4 +1,4 @@
-# TeXLive-2017-with-Pygments-and-LaTeXML
+# TeX Live-2017 with Pygments and LaTeXML
 
 [![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
