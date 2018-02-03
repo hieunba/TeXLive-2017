@@ -49,6 +49,6 @@ After this you will see `perl6_cheatsheet.html` in your directory.
 
 
 **The size of image is 3 GB** which is quite big but
-its ***cool!!*** with all stuff that's available in **CTAN**. :)
+its ***cool*** with all stuff that's available in **CTAN**. :)
 
 
