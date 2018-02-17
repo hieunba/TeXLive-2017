@@ -3,7 +3,8 @@ FROM debian:sid
 MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-LABEL updated_at '2018-01-26'
+LABEL updated_at '2018-02-17'
+
 RUN apt-get update \
   && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
   libdigest-perl-md5-perl python python-pygments && rm -rf /var/lib/apt/lists/*
