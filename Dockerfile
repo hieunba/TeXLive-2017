@@ -1,6 +1,6 @@
 FROM debian:sid
 
-MAINTAINER Dr Suman Khanal <suman81765@gmail.com>
+LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 LABEL updated_at '2018-02-17'
