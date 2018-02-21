@@ -3,6 +3,13 @@ FROM debian:sid
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-ref=$VCS_REF
+      
+
 LABEL updated_at '2018-02-17'
 
 RUN apt-get update \
