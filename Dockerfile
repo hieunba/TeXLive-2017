@@ -17,7 +17,8 @@ RUN apt-get update \
 WORKDIR /usr/local/src
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \  # After the above command runs, there will be a folder named install-tl in folder /usr/local/src
-  && cd install-tl && echo "selected_scheme scheme-full" > profile \
+  && cd install-tl \
+  && echo "selected_scheme scheme-full" > profile \
   && ./install-tl -repository http://mirror.utexas.edu/ctan/systems/texlive/tlnet -profile profile \
   && cd .. \
   && rm -rf install-tl
