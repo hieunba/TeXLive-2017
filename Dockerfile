@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF
       
 
-LABEL updated_at '2018-02-17'
+LABEL updated_at '2018-02-22'
 
 RUN apt-get update \
   && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
