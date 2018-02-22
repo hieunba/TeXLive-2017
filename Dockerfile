@@ -2,15 +2,14 @@ FROM debian:sid
 
 ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
-ARG VCS_REF
+ARG BUILD_DATE="2018-02-23" 
 
-LABEL org.label-schema.license="MIT" \
+ARG VCS_REF="git rev-parse --short HEAD" 
+LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/sumandoc/TeXLive-2017" \
-      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.build-date=$BUILD_DATE \
       maintainer="Dr Suman Khanal <suman81765@gmail.com>"
-      
 
-LABEL updated_at '2018-02-22'
 
 RUN apt-get update \
   && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
