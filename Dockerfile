@@ -1,8 +1,8 @@
 FROM debian:sid
 
-ENV LANG=en_US.UTF-8 \
-    LC_ALL=en_US.UTF-8
-ARG BUILD_DATE="2018-02-23" 
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8
+ARG BUILD_DATE="2018-02-24" 
 
 ARG VCS_REF="git rev-parse --short HEAD" 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
