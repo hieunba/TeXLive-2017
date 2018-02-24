@@ -1,10 +1,11 @@
 # TeX Live-2017 with Pygments and LaTeXML
 
 [![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![](https://images.microbadger.com/badges/image/sumdoc/texlive-2017.svg)](https://microbadger.com/images/sumdoc/texlive-2017 "Get your own image badge on microbadger.com")
 
-Contains full TeXLive-2017 with additional python-pygments library for source code highlighting via minted package.
-Also contains LateXML for converting TeX documents into html/xml/mathml.
+Contains full TeXLive-2017 with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).
+Also contains [LateXML](https://dlmf.nist.gov/LaTeXML/) for converting TeX documents into html/xml/mathml.
 
 
 ## How to get the image?
