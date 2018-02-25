@@ -5,7 +5,7 @@
 [![](https://images.microbadger.com/badges/image/sumdoc/texlive-2017.svg)](https://microbadger.com/images/sumdoc/texlive-2017 "Get your own image badge on microbadger.com")
 
 Contains full TeXLive-2017 with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).
-Also contains [LateXML](https://dlmf.nist.gov/LaTeXML/) for converting TeX documents into html/xml/mathml.
+Also contains [LateXML](https://dlmf.nist.gov/LaTeXML/) for converting TeX documents into html/xml/mathml and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
 
 
 ## How to get the image?
