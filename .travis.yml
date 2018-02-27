@@ -3,4 +3,4 @@ services:
 before_install:
   - docker build -t sumdoc/texlive-2017 .
 script:
-  - docker run -it sumdoc/texlive-2017 /bin/bash
+  - docker run sumdoc/texlive-2017
