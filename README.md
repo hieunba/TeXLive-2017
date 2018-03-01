@@ -4,6 +4,9 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![](https://images.microbadger.com/badges/image/sumdoc/texlive-2017.svg)](https://microbadger.com/images/sumdoc/texlive-2017 "Get your own image badge on microbadger.com")
+[![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2017.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive-2017)
+
+
 
 Contains full TeXLive-2017 with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).
 Also contains [LateXML](https://dlmf.nist.gov/LaTeXML/) for converting TeX documents into html/xml/mathml and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
