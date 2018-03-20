@@ -9,7 +9,7 @@
 
 
 Contains full TeXLive-2017 with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).
-Also contains [LaTeXML](https://dlmf.nist.gov/LaTeXML/) for converting TeX documents into html/xml/mathml and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
+Also contains [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
 
 
 ## How to get the image?
@@ -34,22 +34,6 @@ You will now have access to the terminal. Your working dir is `/home` where you 
 
 Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
-
-
-## For converting tex to html with this docker image
-
-
-Run the  docker container as shown above with `/home` as working directory where your .tex files are located.
-I will show an example using `perl6_cheatsheet.tex`(which is present in this repo) which I will convert to `perl6_cheatsheet.html`.
-
-In the shell do `latexml --destination=perl6_cheatsheet.xml perl6_cheatsheet.tex` and then
-`latexmlpost --destination=perl6_cheatsheet.html perl6_cheatsheet`.
-
-After this you will see `perl6_cheatsheet.html` in your directory.
-
----
-
-**Or another easy way** is to use `Makefile`. Execute `make perl6_cheatsheet.html` in command line and you will get html file.
 
 
 
