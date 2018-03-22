@@ -2,9 +2,14 @@
 
 [![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/sumandoc/TeXLive-2017/blob/master/LICENSE) 
+[![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2017.svg)](https://github.com/sumandoc/TeXLive-2017/blob/master/LICENSE) 
 [![](https://images.microbadger.com/badges/image/sumdoc/texlive-2017.svg)](https://microbadger.com/images/sumdoc/texlive-2017 "Get your own image badge on microbadger.com")
 [![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2017.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive-2017)
+[![Build](https://img.shields.io/docker/automated/sumdoc/texlive-2017.svg)](https://hub.docker.com/r/sumdoc/texlive-2017/)
+[![Docker Pull](https://img.shields.io/docker/pulls/sumdoc/texlive-2017.svg)](https://hub.docker.com/r/sumdoc/texlive-2017/)
+
+
+
 
 
 
