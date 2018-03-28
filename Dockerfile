@@ -1,4 +1,5 @@
-FROM debian:sid
+#FROM debian:sid
+FROM ubuntu
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8
@@ -9,8 +10,8 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 
 RUN apt-get update \
-  && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
-  libdigest-perl-md5-perl python python-pygments && rm -rf /var/lib/apt/lists/*
+  && apt-get install -y gnupg wget curl make libgetopt-long-descriptive-perl \
+  libdigest-perl-md5-perl python-pygments fontconfig && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
