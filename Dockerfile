@@ -8,15 +8,16 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
-RUN apt-get update && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
+RUN apt-get update \
+  && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
   libdigest-perl-md5-perl python python-pygments && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
-RUN curl -sL https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
+RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme scheme-full" > profile \
-  && ./install-tl -repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet -profile profile \
+  && ./install-tl -repository http://mirror.utexas.edu/ctan/systems/texlive/tlnet -profile profile \
   && cd .. \
   && rm -rf install-tl
 
