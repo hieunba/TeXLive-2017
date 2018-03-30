@@ -1,5 +1,5 @@
-#FROM debian:sid
-FROM ubuntu
+FROM debian:sid
+#FROM ubuntu
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8
@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 
 RUN apt-get update \
-  && apt-get install -y gnupg wget curl make libgetopt-long-descriptive-perl \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl \
   libdigest-perl-md5-perl python-pygments fontconfig && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
