@@ -21,17 +21,17 @@ From the interactive docker shell, pull this image with:
 
 ## Why should you use it?
 
-If you work with Latex documents, this is useful to compile your document independent of OS and without the need to install anything.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
+If you work with Latex documents, this is useful to compile your document **independent of OS and without the need to install anything**.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
 
 ## How to run this image/ How do you use it ?
 
-After you are done with the pull, mount the directory present in host operating system containing your .tex files 
+After you are done with the pull, mount the directory present in your host operating system containing .tex files 
 into docker image like this:
 
 `docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumdoc/texlive-2017 bin/bash`
 
 
-You will now have access to the terminal. Your working dir is `/home` where you will see the .tex files.
+You will now have access to the terminal. Your working dir will be `/home` where you will see the .tex files.
 
 Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
