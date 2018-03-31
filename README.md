@@ -6,9 +6,6 @@
 [![Docker Pull](https://img.shields.io/docker/pulls/sumdoc/texlive-2017.svg)](https://hub.docker.com/r/sumdoc/texlive-2017/)
 [![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2017.svg)](https://github.com/sumandoc/TeXLive-2017/blob/master/LICENSE) 
 [![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2017.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive-2017)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-
-
 
 
 
